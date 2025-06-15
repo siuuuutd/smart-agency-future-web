@@ -9,6 +9,7 @@ import SmartInsightsSection from "@/components/SmartInsightsSection";
 import GetStartedSection from "@/components/GetStartedSection";
 import StatisticsSection from "@/components/StatisticsSection";
 import TrialSection from "@/components/TrialSection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -25,6 +26,7 @@ const Index = () => {
         <GetStartedSection />
         <StatisticsSection />
         <TrialSection />
+        <FAQSection />
       </main>
       <Footer />
     </div>
