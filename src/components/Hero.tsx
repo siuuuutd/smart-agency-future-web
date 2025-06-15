@@ -15,15 +15,15 @@ const Hero = () => (
         backgroundRepeat: "no-repeat",
         backgroundSize: "contain",
         backgroundPosition: "center 20px",
-        opacity: 0.33,
-        filter: "drop-shadow(0 2px 32px #ff9a00aa)",
+        opacity: 0.4,
+        filter: "drop-shadow(0 4px 40px #ff9a00)",
       }}
       aria-hidden
     />
     <span className="relative z-10 bg-orange-100 rounded-full px-4 py-1 mb-7 text-orange-500 font-medium text-base shadow font-montserrat">
       Welcome to Adya Agency
     </span>
-    <h1 className="relative z-10 font-hero text-[2.7rem] md:text-[4rem] font-bold text-gray-900 leading-tight text-center mb-4 animate-fade-in drop-shadow-xl">
+    <h1 className="relative z-10 font-montserrat text-[2.7rem] md:text-[4rem] font-bold text-gray-900 leading-tight text-center mb-4 animate-fade-in drop-shadow-xl">
       Optimize Systems, Grow Faster <br />
       With Less Effort
     </h1>
