@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 
@@ -14,10 +13,11 @@ const Hero = () => {
         playsInline
         poster="/lovable-uploads/85cfaad9-50c2-48e0-83b7-afdbe2e1cde8.png"
       >
-        <source src="https://drive.google.com/uc?export=download&id=1FcsqGMTsNRW_09_Ff3D4D4aEhJhyTTMW" type="video/mp4" />
+        <source src="/Untitled design (3).mp4" type="video/mp4" />
         {/* Fallback for browsers that can't play video */}
         Your browser does not support the video tag.
       </video>
+      
       {/* Fallback background image - always present, behind video */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20 transition-all duration-700 hover:opacity-25 hover:scale-105 -z-20"
