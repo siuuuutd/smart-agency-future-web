@@ -4,8 +4,20 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="container flex flex-col items-center py-24 md:py-32">
-      <div className="flex flex-col items-center text-center max-w-3xl">
+    <section className="relative container flex flex-col items-center py-24 md:py-32 overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20"
+        style={{
+          backgroundImage: "url('/lovable-uploads/4d34cc35-1aa1-4fd0-8abf-82a52a710ee4.png')",
+        }}
+      />
+      
+      {/* Optional gradient overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/30" />
+      
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
           Supercharge Your Business with <span className="text-orange-500">AI Automations</span>
         </h1>
