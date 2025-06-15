@@ -1,63 +1,70 @@
 
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import * as THREE from "three";
-import DOTS from "vanta/dist/vanta.dots.min.js";
+
+// Orange grid tile as base64 PNG (50x50 px, lines in #ff9a00)
+const ORANGE_GRID_DATA_URL =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABeElEQVR4nO2WPUqDMBBFx45oOjHiQaA6yBSQ9gI5AloDTAM2g6QBo02gnCLmHAoq1nu20x83JuqVFIvnOedEe9cVRVEV5brfb7t3E7DwJZllIhQy0QjQTaDSvQkTGOipZEUHklGvhVKE1UnK5EevMfg7pN5Arwh0Q5MuYoJL7Q6+SRK6wDI9BnPYbFFcjTdAJv+IqOIPH5osfIDPY37u6Quf4wRxlNNta9dBhsO7gCbnMV3mXgZ0xSg5gyIuu4JTaI6qaMKTo6RiaqeKmGILQ6hh1w4kEAlZNKzE/sJpU0kQUegXiHwiJuA/3nJPo7ZyCIDOfMw91KcMBv6zVmUzFt9Fa5xqOJJtIHpVNc5pr8wGGIJRkclU8BSZgIaQh1ckhWQAAAABJRU5ErkJggg==";
 
 const Hero = () => {
-  const vantaRef = useRef<HTMLDivElement | null>(null);
-  const vantaEffect = useRef<any>(null);
+  const bgRef = useRef<HTMLDivElement | null>(null);
+
+  // Animation position state
+  const pos = useRef({ x: 0, y: 0 });
+  const animationFrame = useRef<number>();
+  const direction = useRef({ dx: 0, dy: 0 });
+
+  // Move bg slightly in the mouse's direction
+  const animate = useCallback(() => {
+    // Apply some smoothing (friction)
+    pos.current.x += direction.current.dx * 2;
+    pos.current.y += direction.current.dy * 2;
+    // Add wrap around for seamless effect
+    pos.current.x = pos.current.x % 50;
+    pos.current.y = pos.current.y % 50;
+    if (bgRef.current) {
+      bgRef.current.style.backgroundPosition = `${pos.current.x}px ${pos.current.y}px`;
+    }
+    animationFrame.current = requestAnimationFrame(animate);
+  }, []);
+
+  // On mouse move, calculate direction vector
+  const onMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (!bgRef.current) return;
+    const rect = bgRef.current.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const dx = e.clientX - cx;
+    const dy = e.clientY - cy;
+    // Normalize direction (between -1 and 1)
+    const len = Math.sqrt(dx * dx + dy * dy) || 1;
+    direction.current.dx = dx / len;
+    direction.current.dy = dy / len;
+  }, []);
 
   useEffect(() => {
-    if (!vantaEffect.current && vantaRef.current) {
-      vantaEffect.current = DOTS({
-        el: vantaRef.current,
-        THREE: THREE,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        color: 0xff9a00,
-        color2: 0xff9a00,
-        backgroundColor: 0xfafafa,
-        size: 7.1,
-        spacing: 42.0,
-        showLines: false,
-      });
-    }
+    animationFrame.current = requestAnimationFrame(animate);
     return () => {
-      if (vantaEffect.current) {
-        try {
-          const el = vantaEffect.current?.el;
-          if (el && el.parentNode) {
-            vantaEffect.current.destroy();
-          }
-        } catch {}
-        vantaEffect.current = null;
-      }
+      if (animationFrame.current) cancelAnimationFrame(animationFrame.current);
     };
-  }, []);
+  }, [animate]);
 
   return (
     <section
-      className="relative w-full min-h-[60vh] flex items-center justify-center bg-[#fafafa] overflow-hidden"
+      className="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#fafafa]"
       style={{ background: "#fafafa" }}
+      onMouseMove={onMouseMove}
     >
-      {/* Vanta background layer */}
+      {/* Animated grid background */}
       <div
-        ref={vantaRef}
-        className="absolute inset-0 w-full h-full z-0"
+        ref={bgRef}
+        className="absolute inset-0 w-full h-full z-0 pointer-events-none bg-repeat"
         style={{
-          minHeight: "400px",
-          minWidth: "100%",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          pointerEvents: "none",
+          backgroundImage: `url('${ORANGE_GRID_DATA_URL}')`,
+          backgroundPosition: "0px 0px",
+          backgroundSize: "50px 50px",
+          transition: "background-position 0.1s linear",
+          opacity: 0.5,
         }}
         aria-hidden="true"
       />
