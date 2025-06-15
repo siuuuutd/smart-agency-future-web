@@ -30,11 +30,11 @@ const FAQSection = () => {
     <section className="py-16 md:py-24 bg-gray-50">
       <div className="container max-w-4xl mx-auto px-8">
         <div className="text-center mb-16">
-          <p className="text-orange-500 font-semibold text-lg mb-4">FAQ</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <p className="text-orange-500 font-semibold text-lg mb-4 transition-all duration-300 hover:scale-110">FAQ</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 transition-all duration-500 hover:scale-105">
             See Our Frequently Asked Questions
           </h2>
-          <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+          <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto transition-all duration-300 hover:text-gray-700">
             We know you might have questions—so we've answered the most important ones right here. Learn how our automated systems helps you improve your reputation and grow your business with ease.
           </p>
         </div>
@@ -43,13 +43,13 @@ const FAQSection = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="group relative bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 cursor-pointer"
+              className="group relative bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-102 hover:-translate-y-1"
             >
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-medium text-gray-900 group-hover:text-orange-500 transition-colors">
                   {faq.question}
                 </h3>
-                <div className="text-gray-400 group-hover:text-orange-500 transition-colors">
+                <div className="text-gray-400 group-hover:text-orange-500 transition-all duration-300 group-hover:rotate-180">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
@@ -57,7 +57,7 @@ const FAQSection = () => {
               </div>
               
               {/* Hover answer */}
-              <div className="absolute left-0 right-0 top-full mt-2 bg-white border border-gray-200 rounded-2xl p-6 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+              <div className="absolute left-0 right-0 top-full mt-2 bg-white border border-gray-200 rounded-2xl p-6 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10 group-hover:scale-102">
                 <p className="text-gray-600 leading-relaxed">
                   {faq.answer}
                 </p>
@@ -67,7 +67,7 @@ const FAQSection = () => {
         </div>
         
         <div className="text-center">
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold text-lg">
+          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/25">
             Start Now
           </Button>
         </div>

@@ -38,12 +38,12 @@ const products = [
 const ProductsSection = () => (
   <section className="py-16 md:py-24 bg-white">
     <div className="container max-w-7xl mx-auto px-4">
-      <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
+      <div className="bg-gray-50 rounded-3xl p-8 md:p-12 transition-all duration-500 hover:shadow-xl hover:bg-gray-100/50">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 transition-all duration-500 hover:scale-105">
             Transform Your Business with Intelligent AI Solutions
           </h2>
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto transition-all duration-300 hover:text-gray-700">
             From automated customer interactions to custom applications, our AI-powered tools streamline your operations and accelerate growth while you focus on scaling your business.
           </p>
         </div>
@@ -54,15 +54,15 @@ const ProductsSection = () => (
             return (
               <div 
                 key={index} 
-                className="bg-white rounded-3xl p-8 text-center hover:shadow-md transition-shadow"
+                className="bg-white rounded-3xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-2 group cursor-pointer"
               >
-                <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                  <IconComponent className="w-6 h-6 text-orange-500" />
+                <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 mx-auto transition-all duration-300 group-hover:bg-orange-200 group-hover:scale-110 group-hover:rotate-6">
+                  <IconComponent className="w-6 h-6 text-orange-500 transition-all duration-300 group-hover:text-orange-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-orange-600">
                   {product.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
                   {product.description}
                 </p>
               </div>
