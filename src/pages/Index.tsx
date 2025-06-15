@@ -5,7 +5,10 @@ import ProductsSection from "@/components/ProductsSection";
 import EnhancedTrustSection from "@/components/EnhancedTrustSection";
 import LowerCostsSection from "@/components/LowerCostsSection";
 import SaveHoursSection from "@/components/SaveHoursSection";
-import FeaturesSection from "@/components/FeaturesSection";
+import QuickRepliesSection from "@/components/QuickRepliesSection";
+import AppointmentSchedulingSection from "@/components/AppointmentSchedulingSection";
+import PersonalizedEngagementSection from "@/components/PersonalizedEngagementSection";
+import SmartInsightsSection from "@/components/SmartInsightsSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -18,7 +21,10 @@ const Index = () => {
         <EnhancedTrustSection />
         <LowerCostsSection />
         <SaveHoursSection />
-        <FeaturesSection />
+        <QuickRepliesSection />
+        <AppointmentSchedulingSection />
+        <PersonalizedEngagementSection />
+        <SmartInsightsSection />
       </main>
       <Footer />
     </div>
