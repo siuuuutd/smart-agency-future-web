@@ -11,10 +11,10 @@ const SmartInsightsSection = () => (
             <img 
               src="/lovable-uploads/34168278-2010-4e8b-83e4-59381dd404b0.png" 
               alt="Smart Financial Insights"
-              className="w-full h-auto rounded-lg shadow-2xl border-2 border-orange-300 shadow-orange-500/50"
+              className="w-full h-auto rounded-lg shadow-2xl border-2 border-orange-300 shadow-orange-500/30"
               style={{
-                filter: 'drop-shadow(0 0 20px rgba(255, 154, 0, 0.4))',
-                boxShadow: '0 0 30px rgba(255, 154, 0, 0.3), 0 0 60px rgba(255, 154, 0, 0.1)'
+                filter: 'drop-shadow(0 0 15px rgba(255, 154, 0, 0.25))',
+                boxShadow: '0 0 20px rgba(255, 154, 0, 0.2), 0 0 40px rgba(255, 154, 0, 0.05)'
               }}
             />
           </div>

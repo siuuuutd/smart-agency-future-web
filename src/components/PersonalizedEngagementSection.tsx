@@ -25,10 +25,10 @@ const PersonalizedEngagementSection = () => (
             <img 
               src="/lovable-uploads/220136c9-3ef3-47b9-886e-6dfa98f3c42a.png" 
               alt="Personalized Customer Engagement"
-              className="w-full h-auto rounded-lg shadow-2xl border-2 border-orange-300 shadow-orange-500/50"
+              className="w-full h-auto rounded-lg shadow-2xl border-2 border-orange-300 shadow-orange-500/30"
               style={{
-                filter: 'drop-shadow(0 0 20px rgba(255, 154, 0, 0.4))',
-                boxShadow: '0 0 30px rgba(255, 154, 0, 0.3), 0 0 60px rgba(255, 154, 0, 0.1)'
+                filter: 'drop-shadow(0 0 15px rgba(255, 154, 0, 0.25))',
+                boxShadow: '0 0 20px rgba(255, 154, 0, 0.2), 0 0 40px rgba(255, 154, 0, 0.05)'
               }}
             />
           </div>
