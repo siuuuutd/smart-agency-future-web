@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Mail, Instagram } from "lucide-react";
 import Header from "@/components/Header";
@@ -19,13 +20,13 @@ const Contact = () => {
                 </p>
                 
                 <div className="space-y-4">
-                  <a href="mailto:veer@adyaagency.com" className="flex items-center space-x-3 text-lg text-gray-700 hover:text-orange-500 transition-colors">
-                    <Mail size={24} />
+                  <a href="mailto:veer@adyaagency.com" className="flex items-center space-x-3 text-lg text-orange-500 hover:text-orange-600 transition-colors">
+                    <Mail size={24} className="text-orange-500" />
                     <span>veer@adyaagency.com</span>
                   </a>
                   
-                  <a href="https://www.instagram.com/adya.agency/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-lg text-gray-700 hover:text-orange-500 transition-colors">
-                    <Instagram size={24} />
+                  <a href="https://www.instagram.com/adya.agency/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-lg text-orange-500 hover:text-orange-600 transition-colors">
+                    <Instagram size={24} className="text-orange-500" />
                     <span className="font-normal">adya.agency</span>
                   </a>
                 </div>
