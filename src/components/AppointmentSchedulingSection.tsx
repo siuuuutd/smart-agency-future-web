@@ -14,7 +14,7 @@ const AppointmentSchedulingSection = () => (
             Let our AI chatbots handle your calendar. Clients can book, reschedule, or cancel appointments effortlessly through conversation.
           </p>
           <div className="flex justify-start">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold">
               Start Now
             </Button>
           </div>
@@ -25,7 +25,7 @@ const AppointmentSchedulingSection = () => (
             <img 
               src="/lovable-uploads/56f2eb5d-c6c3-4d56-891e-a330f28320a9.png" 
               alt="Automated Appointment Scheduling"
-              className="w-full h-auto rounded-lg shadow-2xl border-2 border-orange-300 shadow-orange-500/30"
+              className="w-full h-auto rounded-3xl shadow-2xl border-2 border-orange-300 shadow-orange-500/30"
               style={{
                 filter: 'drop-shadow(0 0 15px rgba(255, 154, 0, 0.25))',
                 boxShadow: '0 0 20px rgba(255, 154, 0, 0.2), 0 0 40px rgba(255, 154, 0, 0.05)'

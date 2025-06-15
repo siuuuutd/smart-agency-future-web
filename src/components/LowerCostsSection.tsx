@@ -11,7 +11,7 @@ const LowerCostsSection = () => (
             <img 
               src="/lovable-uploads/dd54caec-e151-40e0-b533-333cd0f273ec.png" 
               alt="Lower Costs"
-              className="max-w-full h-auto rounded-lg"
+              className="max-w-full h-auto rounded-3xl"
             />
           </div>
         </div>
@@ -23,7 +23,7 @@ const LowerCostsSection = () => (
           <p className="text-lg text-gray-600 leading-relaxed">
             Let the AI do the work for you, no matter how difficult the tasks are, our AI employees work 24/7, allowing you to reinvest and take profits instead of paying more employees.
           </p>
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold">
+          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold">
             Start Now
           </Button>
         </div>

@@ -13,7 +13,7 @@ const SaveHoursSection = () => (
           <p className="text-lg text-gray-600 leading-relaxed">
             Save time with automation while focusing on what you do best – running your business. Our systems run in the background with out any set backs. So you never have to worry about handling issues.
           </p>
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold">
+          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold">
             Start Now
           </Button>
         </div>
@@ -23,7 +23,7 @@ const SaveHoursSection = () => (
             <img 
               src="/lovable-uploads/f83796f5-ba79-4cea-8d6b-f845dd35bfa7.png" 
               alt="Save Hours"
-              className="max-w-full h-auto rounded-lg"
+              className="max-w-full h-auto rounded-3xl"
             />
           </div>
         </div>

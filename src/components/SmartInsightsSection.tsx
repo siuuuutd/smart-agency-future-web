@@ -14,7 +14,7 @@ const SmartInsightsSection = () => (
             Leverage AI to analyze your revenue, costs, and profits, helping you make smarter decisions to reinvest and expand your business.
           </p>
           <div className="flex justify-start">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold">
               Start Now
             </Button>
           </div>
@@ -25,7 +25,7 @@ const SmartInsightsSection = () => (
             <img 
               src="/lovable-uploads/34168278-2010-4e8b-83e4-59381dd404b0.png" 
               alt="Smart Financial Insights"
-              className="w-full h-auto rounded-lg shadow-2xl border-2 border-orange-300 shadow-orange-500/30"
+              className="w-full h-auto rounded-3xl shadow-2xl border-2 border-orange-300 shadow-orange-500/30"
               style={{
                 filter: 'drop-shadow(0 0 15px rgba(255, 154, 0, 0.25))',
                 boxShadow: '0 0 20px rgba(255, 154, 0, 0.2), 0 0 40px rgba(255, 154, 0, 0.05)'
