@@ -9,7 +9,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20 transition-all duration-700 hover:opacity-25 hover:scale-105" 
         style={{
-          backgroundImage: "url('/lovable-uploads/596ba258-ccd7-41b6-8eff-ee0a59f2a492.png')"
+          backgroundImage: "url('/lovable-uploads/c95dc63f-b6db-43c5-89ee-2ae2d7651b6b.png')"
         }} 
       />
       
