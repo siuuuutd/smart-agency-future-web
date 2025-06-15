@@ -1,11 +1,28 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import { Mail, Instagram } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const Contact = () => {
-  return <div className="bg-background min-h-screen w-full font-montserrat">
+  useEffect(() => {
+    // Load Calendly script
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on component unmount
+      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+      if (existingScript) {
+        document.body.removeChild(existingScript);
+      }
+    };
+  }, []);
+
+  return (
+    <div className="bg-background min-h-screen w-full font-montserrat">
       <Header />
       <main className="pt-[180px] pb-16">
         <div className="container max-w-6xl mx-auto px-8">
@@ -36,18 +53,14 @@ const Contact = () => {
             {/* Right Side - Calendly Booking Section */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
               <h2 className="text-2xl font-semibold text-orange-500 mb-6">Schedule a Call</h2>
-              <div className="bg-gray-50 rounded-lg p-8 text-center">
-                <p className="text-gray-600 mb-4">Calendly booking widget will be integrated here</p>
-                <div className="h-64 flex items-center justify-center border-2 border-dashed border-gray-300 rounded-lg">
-                  <span className="text-gray-400">Calendly Integration Placeholder</span>
-                </div>
-              </div>
+              <div className="calendly-inline-widget" data-url="https://calendly.com/veerrhk/ai-service-meeting" style={{minWidth: '320px', height: '700px'}}></div>
             </div>
           </div>
         </div>
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
 
 export default Contact;
