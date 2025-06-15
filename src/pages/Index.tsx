@@ -7,6 +7,7 @@ import AppointmentSchedulingSection from "@/components/AppointmentSchedulingSect
 import PersonalizedEngagementSection from "@/components/PersonalizedEngagementSection";
 import SmartInsightsSection from "@/components/SmartInsightsSection";
 import GetStartedSection from "@/components/GetStartedSection";
+import StatisticsSection from "@/components/StatisticsSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
         <PersonalizedEngagementSection />
         <SmartInsightsSection />
         <GetStartedSection />
+        <StatisticsSection />
       </main>
       <Footer />
     </div>
