@@ -1,6 +1,6 @@
 
 import React from "react";
-import { MessageSquare, Star, Headphones, Monitor, Smartphone } from "lucide-react";
+import { MessageSquare, Star, Headphones, Monitor, Smartphone, Zap } from "lucide-react";
 
 const products = [
   {
@@ -27,6 +27,11 @@ const products = [
     icon: Smartphone,
     title: "Custom Apps",
     description: "Professional app made for your business to increase value for customers."
+  },
+  {
+    icon: Zap,
+    title: "Automations",
+    description: "Intelligent automated systems that handle complex tasks and streamline your business processes effortlessly."
   }
 ];
 
@@ -42,7 +47,7 @@ const ProductsSection = () => (
         </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
         {products.map((product, index) => {
           const IconComponent = product.icon;
           return (
