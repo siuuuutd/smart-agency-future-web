@@ -8,6 +8,7 @@ import PersonalizedEngagementSection from "@/components/PersonalizedEngagementSe
 import SmartInsightsSection from "@/components/SmartInsightsSection";
 import GetStartedSection from "@/components/GetStartedSection";
 import StatisticsSection from "@/components/StatisticsSection";
+import TrialSection from "@/components/TrialSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -23,6 +24,7 @@ const Index = () => {
         <SmartInsightsSection />
         <GetStartedSection />
         <StatisticsSection />
+        <TrialSection />
       </main>
       <Footer />
     </div>
