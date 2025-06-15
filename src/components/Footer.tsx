@@ -1,9 +1,6 @@
-
 import React from "react";
 import { Instagram } from "lucide-react";
-
-const Footer = () => (
-  <footer className="bg-black border-t mt-16">
+const Footer = () => <footer className="bg-black border-t mt-16">
     <div className="container max-w-6xl mx-auto px-8 py-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo Section */}
@@ -32,20 +29,12 @@ const Footer = () => (
         <div>
           <h3 className="text-white font-semibold text-lg mb-4">Contact</h3>
           <div className="space-y-3">
-            <a 
-              href="mailto:veer@adyaagency.com" 
-              className="block text-gray-300 hover:text-white transition-colors"
-            >
+            <a href="mailto:veer@adyaagency.com" className="block text-gray-300 hover:text-white transition-colors">
               veer@adyaagency.com
             </a>
-            <a 
-              href="https://www.instagram.com/adya.agency/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-gray-300 hover:text-orange-500 transition-colors"
-            >
+            <a href="https://www.instagram.com/adya.agency/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-300 hover:text-orange-500 transition-colors">
               <Instagram size={20} />
-              <span>Instagram</span>
+              <span>adya.agency</span>
             </a>
           </div>
         </div>
@@ -57,7 +46,5 @@ const Footer = () => (
         </p>
       </div>
     </div>
-  </footer>
-);
-
+  </footer>;
 export default Footer;
