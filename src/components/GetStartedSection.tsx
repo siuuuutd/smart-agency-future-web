@@ -23,7 +23,7 @@ const GetStartedSection = () => (
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          <div className="bg-gray-50 p-8 rounded-3xl text-left transition-all duration-300 hover:bg-gray-100 hover:scale-105 hover:-translate-y-2 group cursor-pointer">
+          <div className="bg-gray-50 p-8 rounded-3xl text-center transition-all duration-300 hover:bg-gray-100 hover:scale-105 hover:-translate-y-2 group cursor-pointer">
             <div className="flex justify-center mb-4">
               <div className="text-orange-500 text-xl font-bold transition-all duration-300 group-hover:scale-125 group-hover:text-orange-600">1.</div>
             </div>
@@ -35,7 +35,7 @@ const GetStartedSection = () => (
             </p>
           </div>
           
-          <div className="bg-gray-50 p-8 rounded-3xl text-left transition-all duration-300 hover:bg-gray-100 hover:scale-105 hover:-translate-y-2 group cursor-pointer">
+          <div className="bg-gray-50 p-8 rounded-3xl text-center transition-all duration-300 hover:bg-gray-100 hover:scale-105 hover:-translate-y-2 group cursor-pointer">
             <div className="flex justify-center mb-4">
               <div className="text-orange-500 text-xl font-bold transition-all duration-300 group-hover:scale-125 group-hover:text-orange-600">2.</div>
             </div>
@@ -47,7 +47,7 @@ const GetStartedSection = () => (
             </p>
           </div>
           
-          <div className="bg-gray-50 p-8 rounded-3xl text-left transition-all duration-300 hover:bg-gray-100 hover:scale-105 hover:-translate-y-2 group cursor-pointer">
+          <div className="bg-gray-50 p-8 rounded-3xl text-center transition-all duration-300 hover:bg-gray-100 hover:scale-105 hover:-translate-y-2 group cursor-pointer">
             <div className="flex justify-center mb-4">
               <div className="text-orange-500 text-xl font-bold transition-all duration-300 group-hover:scale-125 group-hover:text-orange-600">3.</div>
             </div>
