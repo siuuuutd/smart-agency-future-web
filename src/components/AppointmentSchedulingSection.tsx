@@ -3,8 +3,19 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 
 const AppointmentSchedulingSection = () => (
-  <section className="py-16 md:py-24 bg-white">
-    <div className="container max-w-6xl mx-auto px-8">
+  <section className="py-16 md:py-24 relative overflow-hidden">
+    {/* Background Image */}
+    <div 
+      className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20 transition-all duration-700 hover:opacity-25 hover:scale-105" 
+      style={{
+        backgroundImage: "url('/lovable-uploads/e82fc106-2728-4976-bc31-7b0550878cce.png')"
+      }} 
+    />
+    
+    {/* Optional gradient overlay for better text readability */}
+    <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/30" />
+    
+    <div className="container max-w-6xl mx-auto px-8 relative z-10">
       <div className="bg-gray-50 rounded-3xl p-8 md:p-12 transition-all duration-500 hover:shadow-xl hover:scale-102">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6 text-left lg:pr-8">

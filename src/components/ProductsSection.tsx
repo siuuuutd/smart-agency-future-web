@@ -36,8 +36,19 @@ const products = [
 ];
 
 const ProductsSection = () => (
-  <section className="py-16 md:py-24 bg-white">
-    <div className="container max-w-7xl mx-auto px-4">
+  <section className="py-16 md:py-24 relative overflow-hidden">
+    {/* Background Image */}
+    <div 
+      className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20 transition-all duration-700 hover:opacity-25 hover:scale-105" 
+      style={{
+        backgroundImage: "url('/lovable-uploads/e82fc106-2728-4976-bc31-7b0550878cce.png')"
+      }} 
+    />
+    
+    {/* Optional gradient overlay for better text readability */}
+    <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/30" />
+    
+    <div className="container max-w-7xl mx-auto px-4 relative z-10">
       <div className="bg-gray-50 rounded-3xl p-8 md:p-12 transition-all duration-500 hover:shadow-xl hover:bg-gray-100/50">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 transition-all duration-500 hover:scale-105">
