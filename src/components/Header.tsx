@@ -26,8 +26,8 @@ const Header = () => {
     }`}>
       <div className={`relative backdrop-blur-md border border-gray-200 shadow-lg transition-all duration-700 ease-out overflow-hidden ${
         isScrolled 
-          ? 'bg-white/90 rounded-full px-6 py-2' 
-          : 'bg-white/95 rounded-2xl px-8 py-4'
+          ? 'bg-white rounded-full px-6 py-2' 
+          : 'bg-white rounded-2xl px-8 py-4'
       }`}>
         {/* Moving glow animation */}
         <div className="absolute inset-0 opacity-30">
