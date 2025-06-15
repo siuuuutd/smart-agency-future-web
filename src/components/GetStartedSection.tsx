@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const GetStartedSection = () => (
   <section className="py-16 md:py-24 bg-gray-50">
@@ -14,9 +15,11 @@ const GetStartedSection = () => (
           <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8 transition-all duration-300 hover:text-gray-700">
             Our simple, three-step process takes the hassle out of implementing AI, so you can focus on running your business while we handle the rest.
           </p>
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/25">
-            Start Now
-          </Button>
+          <Link to="/contact">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/25">
+              Start Now
+            </Button>
+          </Link>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">

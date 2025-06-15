@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const TrialSection = () => (
   <section className="py-16 md:py-20 bg-white">
@@ -13,9 +14,11 @@ const TrialSection = () => (
           <p className="text-lg md:text-xl mb-8 leading-relaxed opacity-95 transition-all duration-300 hover:opacity-100">
             You deserve to save hours, money and efforts operating your business. With our automated system solutions, you can effortlessly collect more information, attract new customers, and stay ahead of the competition.
           </p>
-          <Button className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-3 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-110 hover:shadow-lg">
-            Start Now
-          </Button>
+          <Link to="/contact">
+            <Button className="bg-white text-orange-500 hover:bg-gray-100 px-8 py-3 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-110 hover:shadow-lg">
+              Start Now
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

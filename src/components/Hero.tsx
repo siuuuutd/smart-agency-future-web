@@ -1,6 +1,7 @@
 
 import React, { useRef, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const bgRef = useRef<HTMLDivElement | null>(null);
@@ -55,12 +56,14 @@ const Hero = () => {
           We build custom AI solutions that streamline your operations, enhance customer engagement, and drive growth. Let AI handle the work, so you can focus on what matters most.
         </p>
         <div className="mt-8 flex gap-4">
-          <Button
-            size="lg"
-            className="bg-orange-500 hover:bg-orange-600 text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/25"
-          >
-            Get Started
-          </Button>
+          <Link to="/contact">
+            <Button
+              size="lg"
+              className="bg-orange-500 hover:bg-orange-600 text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/25"
+            >
+              Get Started
+            </Button>
+          </Link>
           <Button
             size="lg"
             variant="outline"

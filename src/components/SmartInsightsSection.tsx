@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const SmartInsightsSection = () => (
   <section className="py-16 md:py-24 bg-white">
@@ -15,9 +16,11 @@ const SmartInsightsSection = () => (
               Leverage AI to analyze your revenue, costs, and profits, helping you make smarter decisions to reinvest and expand your business.
             </p>
             <div className="flex justify-start">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/25">
-                Start Now
-              </Button>
+              <Link to="/contact">
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/25">
+                  Start Now
+                </Button>
+              </Link>
             </div>
           </div>
           
