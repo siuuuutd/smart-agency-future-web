@@ -1,4 +1,3 @@
-
 import React from "react";
 import { MessageSquare, Star, Headphones, Monitor, Smartphone, Zap } from "lucide-react";
 
@@ -36,7 +35,7 @@ const products = [
 ];
 
 const ProductsSection = () => (
-  <section className="py-16 md:py-24 bg-white">
+  <section id="about" className="py-16 md:py-24 bg-white">
     <div className="container max-w-7xl mx-auto px-4">
       <div className="bg-gray-50 rounded-3xl p-8 md:p-12 transition-all duration-500 hover:shadow-xl hover:bg-gray-100/50">
         <div className="text-center mb-16">
