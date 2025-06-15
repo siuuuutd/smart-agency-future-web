@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 
 const GetStartedSection = () => (
-  <section className="py-16 md:py-24 bg-gray-50">
+  <section className="py-16 md:py-24 bg-white">
     <div className="container max-w-6xl mx-auto px-8">
       <div className="text-center mb-16">
         <p className="text-orange-500 font-semibold text-lg mb-4">Three Steps</p>
