@@ -6,6 +6,7 @@ import QuickRepliesSection from "@/components/QuickRepliesSection";
 import AppointmentSchedulingSection from "@/components/AppointmentSchedulingSection";
 import PersonalizedEngagementSection from "@/components/PersonalizedEngagementSection";
 import SmartInsightsSection from "@/components/SmartInsightsSection";
+import GetStartedSection from "@/components/GetStartedSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
         <AppointmentSchedulingSection />
         <PersonalizedEngagementSection />
         <SmartInsightsSection />
+        <GetStartedSection />
       </main>
       <Footer />
     </div>
