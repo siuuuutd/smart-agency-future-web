@@ -13,7 +13,7 @@ const EnhancedTrustSection = () => (
           <p className="text-lg text-gray-600 leading-relaxed">
             Our automations allow you to be present for customers all the time allowing you to build trust and reliability through our AI Chatbots, Automated Google Reviews and AI Callers.
           </p>
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold">
+          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold">
             Start Now
           </Button>
           
@@ -26,7 +26,7 @@ const EnhancedTrustSection = () => (
             </div>
             
             <div className="space-y-3">
-              <div className="bg-white rounded-lg p-4 border shadow-sm flex items-center justify-between">
+              <div className="bg-white rounded-2xl p-4 border shadow-sm flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="text-2xl font-bold text-gray-900">1</span>
                   <div>
@@ -44,7 +44,7 @@ const EnhancedTrustSection = () => (
                 </div>
               </div>
               
-              <div className="bg-white rounded-lg p-4 border shadow-sm flex items-center justify-between">
+              <div className="bg-white rounded-2xl p-4 border shadow-sm flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="text-2xl font-bold text-gray-900">2</span>
                   <div>
@@ -62,7 +62,7 @@ const EnhancedTrustSection = () => (
                 </div>
               </div>
               
-              <div className="bg-white rounded-lg p-4 border shadow-sm flex items-center justify-between">
+              <div className="bg-white rounded-2xl p-4 border shadow-sm flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="text-2xl font-bold text-gray-900">3</span>
                   <div>
@@ -88,7 +88,7 @@ const EnhancedTrustSection = () => (
             <img 
               src="/lovable-uploads/05b245d2-4728-402e-84c0-f1a25354930e.png" 
               alt="Enhanced Trust"
-              className="max-w-full h-auto rounded-lg"
+              className="max-w-full h-auto rounded-3xl"
             />
           </div>
         </div>

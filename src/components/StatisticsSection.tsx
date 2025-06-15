@@ -13,7 +13,7 @@ const StatisticsSection = () => (
       
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
         {/* First statistic - large box */}
-        <div className="md:col-span-2 lg:col-span-2 bg-white p-8 rounded-2xl text-left shadow-sm">
+        <div className="md:col-span-2 lg:col-span-2 bg-white p-8 rounded-3xl text-left shadow-sm">
           <div className="text-orange-500 text-5xl font-bold mb-4">92%</div>
           <p className="text-gray-600 text-lg">
             Of consumers read online reviews before choosing a local business.
@@ -21,7 +21,7 @@ const StatisticsSection = () => (
         </div>
         
         {/* Second statistic - medium box, center aligned */}
-        <div className="md:col-span-1 lg:col-span-2 bg-white p-8 rounded-2xl text-center shadow-sm">
+        <div className="md:col-span-1 lg:col-span-2 bg-white p-8 rounded-3xl text-center shadow-sm">
           <p className="text-gray-600 text-base mb-4">
             AI voice assistants can reduce call handling time by up to
           </p>
@@ -29,7 +29,7 @@ const StatisticsSection = () => (
         </div>
         
         {/* Third statistic - small box, right aligned */}
-        <div className="md:col-span-1 lg:col-span-1 bg-white p-6 rounded-2xl text-right shadow-sm">
+        <div className="md:col-span-1 lg:col-span-1 bg-white p-6 rounded-3xl text-right shadow-sm">
           <div className="text-orange-500 text-4xl font-bold mb-3">75%</div>
           <p className="text-gray-600 text-sm">
             of consumers admit to judging a company's credibility based on its website design
@@ -37,7 +37,7 @@ const StatisticsSection = () => (
         </div>
         
         {/* Fourth statistic - medium box */}
-        <div className="md:col-span-1 lg:col-span-1 bg-white p-6 rounded-2xl text-left shadow-sm">
+        <div className="md:col-span-1 lg:col-span-1 bg-white p-6 rounded-3xl text-left shadow-sm">
           <p className="text-gray-600 text-sm mb-3">
             Having a branded app increases customer loyalty by
           </p>
@@ -45,7 +45,7 @@ const StatisticsSection = () => (
         </div>
         
         {/* Fifth statistic - large box, center aligned */}
-        <div className="md:col-span-2 lg:col-span-2 bg-white p-8 rounded-2xl text-center shadow-sm">
+        <div className="md:col-span-2 lg:col-span-2 bg-white p-8 rounded-3xl text-center shadow-sm">
           <div className="text-orange-500 text-5xl font-bold mb-4">93%</div>
           <p className="text-gray-600 text-lg">
             of consumers say online reviews impact their purchasing decisions.

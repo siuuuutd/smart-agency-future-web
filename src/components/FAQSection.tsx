@@ -43,7 +43,7 @@ const FAQSection = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="group relative bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 cursor-pointer"
+              className="group relative bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-medium text-gray-900 group-hover:text-orange-500 transition-colors">
@@ -57,7 +57,7 @@ const FAQSection = () => {
               </div>
               
               {/* Hover answer */}
-              <div className="absolute left-0 right-0 top-full mt-2 bg-white border border-gray-200 rounded-lg p-6 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+              <div className="absolute left-0 right-0 top-full mt-2 bg-white border border-gray-200 rounded-2xl p-6 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
                 <p className="text-gray-600 leading-relaxed">
                   {faq.answer}
                 </p>
@@ -67,7 +67,7 @@ const FAQSection = () => {
         </div>
         
         <div className="text-center">
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold text-lg">
+          <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold text-lg">
             Start Now
           </Button>
         </div>

@@ -53,9 +53,9 @@ const ProductsSection = () => (
           return (
             <div 
               key={index} 
-              className="bg-white rounded-lg p-8 text-center hover:shadow-md transition-shadow"
+              className="bg-white rounded-3xl p-8 text-center hover:shadow-md transition-shadow"
             >
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6 mx-auto">
+              <div className="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <IconComponent className="w-6 h-6 text-orange-500" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
