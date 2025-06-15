@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const navLinks = [
-  { label: "Features", href: "#features" },
   { label: "About", href: "#about" },
+  { label: "Features", href: "#features" },
   { label: "Contact", href: "/contact" },
 ];
 
