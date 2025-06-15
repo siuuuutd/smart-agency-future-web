@@ -1,7 +1,9 @@
+
 import React from "react";
 import { Mail, Instagram } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
 const Contact = () => {
   return <div className="bg-background min-h-screen w-full font-montserrat">
       <Header />
@@ -23,7 +25,7 @@ const Contact = () => {
                     <span>veer@adyaagency.com</span>
                   </a>
                   
-                  <a href="https://www.instagram.com/adya_agency" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-lg text-gray-700 hover:text-orange-500 transition-colors">
+                  <a href="https://www.instagram.com/adya.agency/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-lg text-gray-700 hover:text-orange-500 transition-colors">
                     <Instagram size={24} />
                     <span className="font-normal">adya.agency</span>
                   </a>
@@ -47,4 +49,5 @@ const Contact = () => {
       <Footer />
     </div>;
 };
+
 export default Contact;
