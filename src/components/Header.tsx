@@ -37,17 +37,12 @@ const Header = () => {
         <div className={`relative flex items-center transition-all duration-700 ease-out ${
           isScrolled ? 'space-x-8' : 'justify-between'
         }`}>
-          <a href="/" className="flex items-center space-x-2">
+          <a href="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/06410a89-0898-45f8-8ce8-ece7aa12652d.png" 
+              src="/lovable-uploads/073c0380-e646-4460-bdb6-9beed3e0c3e3.png" 
               alt="Adya Agency Logo" 
-              className={`transition-all duration-700 ease-out ${isScrolled ? 'h-6 w-6' : 'h-8 w-8'}`} 
+              className={`transition-all duration-700 ease-out ${isScrolled ? 'h-8' : 'h-10'}`} 
             />
-            <span className={`font-bold text-gray-900 transition-all duration-700 ease-out ${
-              isScrolled ? 'text-base' : 'text-lg'
-            }`}>
-              Adya Agency
-            </span>
           </a>
           <nav className={`flex items-center gap-6 transition-all duration-700 ease-out ${
             isScrolled ? 'text-sm' : 'text-base'
