@@ -27,7 +27,7 @@ const Header = () => {
       <div className={`relative backdrop-blur-md border border-gray-200 shadow-lg transition-all duration-300 overflow-hidden ${
         isScrolled 
           ? 'bg-white/90 rounded-full px-6 py-2' 
-          : 'bg-white/95 rounded-2xl px-8 py-3'
+          : 'bg-white/95 rounded-2xl px-8 py-4'
       }`}>
         {/* Moving glow animation */}
         <div className="absolute inset-0 opacity-30">
@@ -41,16 +41,16 @@ const Header = () => {
             <img 
               src="/lovable-uploads/06410a89-0898-45f8-8ce8-ece7aa12652d.png" 
               alt="Adya Agency Logo" 
-              className={`transition-all duration-300 ${isScrolled ? 'h-5 w-5' : 'h-7 w-7'}`} 
+              className={`transition-all duration-300 ${isScrolled ? 'h-6 w-6' : 'h-8 w-8'}`} 
             />
             <span className={`font-bold text-gray-900 transition-all duration-300 ${
-              isScrolled ? 'text-sm' : 'text-base'
+              isScrolled ? 'text-base' : 'text-lg'
             }`}>
               Adya Agency
             </span>
           </a>
           <nav className={`flex items-center gap-6 transition-all duration-300 ${
-            isScrolled ? 'text-sm' : 'text-sm'
+            isScrolled ? 'text-sm' : 'text-base'
           }`}>
             {navLinks.map((link) => (
               <a
