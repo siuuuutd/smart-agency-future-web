@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Mail, Instagram } from "lucide-react";
 import Header from "@/components/Header";
@@ -12,7 +11,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Side - Contact Information */}
             <div className="space-y-8">
-              <h1 className="text-5xl font-bold text-gray-900 mb-8">Contact Us</h1>
+              <h1 className="text-5xl font-bold text-orange-500 mb-8">Contact Us</h1>
               
               <div className="space-y-6">
                 <p className="text-lg text-gray-600 leading-relaxed">
@@ -35,7 +34,7 @@ const Contact = () => {
             
             {/* Right Side - Calendly Booking Section */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Schedule a Call</h2>
+              <h2 className="text-2xl font-semibold text-orange-500 mb-6">Schedule a Call</h2>
               <div className="bg-gray-50 rounded-lg p-8 text-center">
                 <p className="text-gray-600 mb-4">Calendly booking widget will be integrated here</p>
                 <div className="h-64 flex items-center justify-center border-2 border-dashed border-gray-300 rounded-lg">
