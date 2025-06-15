@@ -1,12 +1,6 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 const FAQSection = () => {
   const faqs = [
@@ -45,28 +39,32 @@ const FAQSection = () => {
           </p>
         </div>
         
-        <Accordion type="single" collapsible className="space-y-4 mb-12">
+        <div className="space-y-4 mb-12">
           {faqs.map((faq, index) => (
-            <AccordionItem 
+            <div 
               key={index}
-              value={`item-${index}`}
-              className="group bg-white rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-500 hover:scale-[1.02] hover:-translate-y-1 overflow-hidden"
+              className="group relative bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-500 cursor-pointer hover:scale-[1.02] hover:-translate-y-1"
             >
-              <AccordionTrigger className="px-6 py-6 text-left hover:no-underline group-hover:text-orange-500 transition-all duration-300">
-                <span className="text-lg font-medium text-gray-900 group-hover:text-orange-500 transition-colors duration-300">
+              <div className="flex items-center justify-between">
+                <h3 className="text-lg font-medium text-gray-900 group-hover:text-orange-500 transition-colors duration-300">
                   {faq.question}
-                </span>
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-6 pt-0">
-                <div className="pt-2 border-t border-gray-100">
-                  <p className="text-gray-600 leading-relaxed">
-                    {faq.answer}
-                  </p>
+                </h3>
+                <div className="text-gray-400 group-hover:text-orange-500 transition-all duration-300 group-hover:rotate-180">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
                 </div>
-              </AccordionContent>
-            </AccordionItem>
+              </div>
+              
+              {/* Hover answer */}
+              <div className="absolute left-0 right-0 top-full mt-2 bg-white border border-gray-200 rounded-2xl p-6 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-10 transform translate-y-2 group-hover:translate-y-0">
+                <p className="text-gray-600 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            </div>
           ))}
-        </Accordion>
+        </div>
         
         <div className="text-center">
           <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-orange-500/25">
