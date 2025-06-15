@@ -3,34 +3,36 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 
 const SmartInsightsSection = () => (
-  <section className="py-16 md:py-24 bg-gray-50">
+  <section className="py-16 md:py-24 bg-white">
     <div className="container max-w-6xl mx-auto px-8">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div className="space-y-6 text-left lg:pr-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-            Smart Financial Insights
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Leverage AI to analyze your revenue, costs, and profits, helping you make smarter decisions to reinvest and expand your business.
-          </p>
-          <div className="flex justify-start">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold">
-              Start Now
-            </Button>
+      <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-6 text-left lg:pr-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+              Smart Financial Insights
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Leverage AI to analyze your revenue, costs, and profits, helping you make smarter decisions to reinvest and expand your business.
+            </p>
+            <div className="flex justify-start">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl font-semibold">
+                Start Now
+              </Button>
+            </div>
           </div>
-        </div>
-        
-        <div className="flex justify-center">
-          <div className="relative max-w-sm">
-            <img 
-              src="/lovable-uploads/34168278-2010-4e8b-83e4-59381dd404b0.png" 
-              alt="Smart Financial Insights"
-              className="w-full h-auto rounded-3xl shadow-2xl border-2 border-orange-300 shadow-orange-500/30"
-              style={{
-                filter: 'drop-shadow(0 0 15px rgba(255, 154, 0, 0.25))',
-                boxShadow: '0 0 20px rgba(255, 154, 0, 0.2), 0 0 40px rgba(255, 154, 0, 0.05)'
-              }}
-            />
+          
+          <div className="flex justify-center">
+            <div className="relative max-w-sm">
+              <img 
+                src="/lovable-uploads/34168278-2010-4e8b-83e4-59381dd404b0.png" 
+                alt="Smart Financial Insights"
+                className="w-full h-auto rounded-3xl shadow-2xl border-2 border-orange-300 shadow-orange-500/30"
+                style={{
+                  filter: 'drop-shadow(0 0 15px rgba(255, 154, 0, 0.25))',
+                  boxShadow: '0 0 20px rgba(255, 154, 0, 0.2), 0 0 40px rgba(255, 154, 0, 0.05)'
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
