@@ -5,16 +5,26 @@ import { Button } from "@/components/ui/button";
 const Hero = () => {
   return (
     <section className="relative container flex flex-col items-center pt-32 pb-24 md:pt-40 md:pb-32 lg:pt-48 lg:pb-40 overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20 transition-all duration-700 hover:opacity-25 hover:scale-105" 
-        style={{
-          backgroundImage: "url('/lovable-uploads/85cfaad9-50c2-48e0-83b7-afdbe2e1cde8.png')"
-        }} 
-      />
+      {/* Background Video */}
+      <video 
+        className="absolute inset-0 w-full h-full object-cover opacity-30 transition-all duration-700 hover:opacity-35" 
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="https://drive.google.com/uc?export=download&id=1FcsqGMTsNRW_09_Ff3D4D4aEhJhyTTMW" type="video/mp4" />
+        {/* Fallback to the original background image if video fails to load */}
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20 transition-all duration-700 hover:opacity-25 hover:scale-105" 
+          style={{
+            backgroundImage: "url('/lovable-uploads/85cfaad9-50c2-48e0-83b7-afdbe2e1cde8.png')"
+          }} 
+        />
+      </video>
       
       {/* Optional gradient overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/30 rounded-lg" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white/40 rounded-lg" />
       
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
