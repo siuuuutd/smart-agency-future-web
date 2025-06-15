@@ -17,8 +17,14 @@ const Hero = () => {
     const dy = (e.clientY - cy) / rect.height;
     
     // Move background based on mouse position (additive to the base animation)
-    pos.current.x = dx * 10;
-    pos.current.y = dy * 10;
+    pos.current.x = dx * 15;
+    pos.current.y = dy * 15;
+  }, []);
+
+  // Reset mouse position when mouse leaves
+  const onMouseLeave = useCallback(() => {
+    pos.current.x = 0;
+    pos.current.y = 0;
   }, []);
 
   return (
@@ -26,14 +32,15 @@ const Hero = () => {
       ref={bgRef}
       className="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden pt-24"
       onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
       style={{
         backgroundColor: '#fafafa',
         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cg fill='none' stroke='%23ff9a00' stroke-width='1' opacity='0.3'%3E%3Cpath d='M0 0h50v50H0z'/%3E%3C/g%3E%3C/svg%3E")`,
         backgroundRepeat: 'repeat',
         backgroundSize: '50px 50px',
-        animation: 'gridMove 20s linear infinite',
+        animation: 'gridMove 8s linear infinite',
         transform: `translate(${pos.current.x}px, ${pos.current.y}px)`,
-        transition: 'transform 0.1s ease-out'
+        transition: 'transform 0.2s ease-out'
       }}
     >
       {/* Foreground content */}
