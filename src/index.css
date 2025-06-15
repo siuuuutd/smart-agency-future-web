@@ -11,6 +11,21 @@
   @apply font-playfair;
 }
 
+/* Ultra smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Enhanced smooth scrolling for all elements */
+* {
+  scroll-behavior: smooth;
+}
+
 /* Custom glow animation for navigation */
 @keyframes glow-sweep {
   0% {
@@ -22,6 +37,22 @@
   100% {
     transform: translateX(300%) skewX(-15deg);
   }
+}
+
+/* Custom scroll animations */
+@keyframes smooth-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.smooth-entrance {
+  animation: smooth-entrance 0.8s ease-out;
 }
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
