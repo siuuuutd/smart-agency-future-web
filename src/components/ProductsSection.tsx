@@ -40,10 +40,10 @@ const ProductsSection = () => (
     <div className="container max-w-6xl mx-auto px-4">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          We make building your business's online reputation easier than ever.
+          Transform Your Business with Intelligent AI Solutions
         </h2>
         <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-          Our automated Google review tools ensure you stand out from the competition by turning happy customers into loyal brand advocates.
+          From automated customer interactions to custom applications, our AI-powered tools streamline your operations and accelerate growth while you focus on scaling your business.
         </p>
       </div>
       
