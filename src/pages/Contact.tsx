@@ -2,10 +2,8 @@ import React from "react";
 import { Mail, Instagram } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
 const Contact = () => {
-  return (
-    <div className="bg-background min-h-screen w-full font-montserrat">
+  return <div className="bg-background min-h-screen w-full font-montserrat">
       <Header />
       <main className="pt-[120px] pb-16">
         <div className="container max-w-6xl mx-auto px-8">
@@ -20,22 +18,14 @@ const Contact = () => {
                 </p>
                 
                 <div className="space-y-4">
-                  <a 
-                    href="mailto:veer@adyaagency.com" 
-                    className="flex items-center space-x-3 text-lg text-gray-700 hover:text-orange-500 transition-colors"
-                  >
+                  <a href="mailto:veer@adyaagency.com" className="flex items-center space-x-3 text-lg text-gray-700 hover:text-orange-500 transition-colors">
                     <Mail size={24} />
                     <span>veer@adyaagency.com</span>
                   </a>
                   
-                  <a 
-                    href="https://www.instagram.com/adya_agency" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-3 text-lg text-gray-700 hover:text-orange-500 transition-colors"
-                  >
+                  <a href="https://www.instagram.com/adya_agency" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-lg text-gray-700 hover:text-orange-500 transition-colors">
                     <Instagram size={24} />
-                    <span>adya_agency</span>
+                    <span className="font-normal">adya.agency</span>
                   </a>
                 </div>
               </div>
@@ -55,8 +45,6 @@ const Contact = () => {
         </div>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
