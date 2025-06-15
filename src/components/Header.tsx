@@ -2,32 +2,31 @@
 import React from "react";
 
 const navLinks = [
-  { label: "About Us", href: "#about" },
   { label: "Features", href: "#features" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
 const Header = () => (
-  <header className="w-full flex justify-center pt-6 pb-4">
-    <div className="w-full max-w-6xl bg-white/100 rounded-2xl shadow-md flex items-center px-8 py-3 justify-between border border-gray-100">
-      <div className="flex items-center space-x-2">
-        {/* Placeholder for logo, replace with actual logo as needed */}
-        <span className="text-2xl font-semibold text-orange-500 flex items-center">
-          {/* Simple SVG icon as logo placeholder */}
-          <svg width="32" height="32" fill="none" className="mr-2" viewBox="0 0 48 48">
-            <rect x="6" y="6" width="36" height="36" rx="10" stroke="#FFA500" strokeWidth="4" />
-            <circle cx="24" cy="24" r="8" stroke="#FFA500" strokeWidth="4" />
-          </svg>
-          Adya Agency
-        </span>
+  <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <div className="container flex h-14 max-w-screen-2xl items-center">
+      <div className="mr-4 flex">
+        <a href="/" className="mr-6 flex items-center space-x-2">
+          <img src="/lovable-uploads/06410a89-0898-45f8-8ce8-ece7aa12652d.png" alt="Adya Agency Logo" className="h-8 w-8" />
+          <span className="font-bold sm:inline-block">Adya Agency</span>
+        </a>
+        <nav className="flex items-center gap-6 text-sm">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="transition-colors hover:text-foreground/80 text-foreground/60"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
       </div>
-      <nav>
-        <ul className="flex items-center gap-8 text-lg font-medium">
-          {navLinks.map(link =>
-            <li key={link.label}><a href={link.href} className="hover:text-orange-500 transition">{link.label}</a></li>
-          )}
-        </ul>
-      </nav>
     </div>
   </header>
 );

@@ -1,60 +1,51 @@
 
 import React from "react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const features = [
   {
-    title: "AI Chatbots",
-    description: "Automatically handle customer enquiries real time with the ability to book appointments and store information.",
-    icon: (
-      <span className="text-orange-400 text-2xl">💬</span>
-    ),
+    title: "AI-Powered Quick Replies",
+    description: "Engage customers instantly with intelligent, automated responses. Our AI understands context and provides relevant answers, 24/7.",
+    image: "/lovable-uploads/fcbc5a16-e8b0-41ca-9333-c689fc7fbcba.png",
   },
   {
-    title: "Automated Google Reviews",
-    description: "Send personalized review invites via text or email to your customers after every transaction.",
-    icon: (
-      <span className="text-yellow-400 text-2xl">⭐</span>
-    ),
+    title: "Automated Appointment Scheduling",
+    description: "Let our AI chatbots handle your calendar. Clients can book, reschedule, or cancel appointments effortlessly through conversation.",
+    image: "/lovable-uploads/7f70b1de-ea85-40ec-89dc-97b683950e9e.png",
   },
   {
-    title: "AI Callers",
-    description: "No more manually responding to calls. AI caller has the ability to handle customer interactions and use systems.",
-    icon: (
-      <span className="text-orange-400 text-2xl">📞</span>
-    ),
+    title: "Personalized Customer Engagement",
+    description: "Build stronger relationships with personalized, automated follow-ups and interactions that make every customer feel valued.",
+    image: "/lovable-uploads/278fa030-2146-4ad4-bb2e-2f1d153cf3f8.png",
   },
   {
-    title: "Custom Websites",
-    description: "Direct professional websites built for your business based on your needs.",
-    icon: (
-      <span className="text-orange-400 text-2xl">💻</span>
-    ),
-  },
-  {
-    title: "Custom Apps",
-    description: "Professional app made for your business to increase value for customers.",
-    icon: (
-      <span className="text-orange-400 text-2xl">📱</span>
-    ),
+    title: "Smart Financial Insights",
+    description: "Leverage AI to analyze your revenue, costs, and profits, helping you make smarter decisions to reinvest and expand your business.",
+    image: "/lovable-uploads/596ba258-ccd7-41b6-8eff-ee0a59f2a492.png",
   },
 ];
 
 const FeaturesSection = () => (
-  <section id="features" className="py-16 w-full max-w-7xl mx-auto flex flex-col items-center">
-    <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">We make building your business’s online reputation easier than ever.</h2>
-    <p className="text-lg text-gray-500 mb-8 text-center max-w-2xl">
-      Our automated Google review tools ensure you stand out from the competition by turning happy customers into loyal brand advocates.
-    </p>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full">
+  <section id="features" className="container py-16 md:py-24">
+    <div className="flex flex-col items-center text-center mb-12">
+      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Features Designed for Growth</h2>
+      <p className="mt-4 max-w-2xl text-muted-foreground">
+        Explore the powerful AI tools we've built to automate tasks and unlock your business's full potential.
+      </p>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {features.map((feature) => (
-        <div
-          key={feature.title}
-          className="bg-white rounded-2xl shadow hover:shadow-lg border border-gray-100 p-6 flex flex-col items-start transition group"
-        >
-          <div className="mb-3">{feature.icon}</div>
-          <h3 className="font-semibold text-xl mb-1 group-hover:text-orange-500 transition">{feature.title}</h3>
-          <p className="text-gray-600 text-base">{feature.description}</p>
-        </div>
+        <Card key={feature.title} className="overflow-hidden transition-all hover:shadow-lg">
+          <CardContent className="p-0">
+            <div className="bg-muted flex justify-center items-center p-8">
+              <img src={feature.image} alt={feature.title} className="rounded-lg max-h-60 object-contain" />
+            </div>
+          </CardContent>
+          <CardHeader>
+            <CardTitle>{feature.title}</CardTitle>
+            <CardDescription className="pt-2">{feature.description}</CardDescription>
+          </CardHeader>
+        </Card>
       ))}
     </div>
   </section>
