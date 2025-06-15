@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Google Fonts - be sure to add links in index.html as well */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap');
+
+/* Set default font for headings and text */
+body {
+  @apply font-montserrat;
+}
+
+/* Add custom class for hero heading font */
+.font-hero {
+  @apply font-playfair;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
 @layer base {
