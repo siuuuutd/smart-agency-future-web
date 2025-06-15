@@ -3,6 +3,16 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const handleVideoError = (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
+    console.log('Video failed to load:', e);
+    const video = e.currentTarget;
+    video.style.display = 'none';
+  };
+
+  const handleVideoLoad = () => {
+    console.log('Video loaded successfully');
+  };
+
   return (
     <section className="relative container flex flex-col items-center pt-32 pb-24 md:pt-40 md:pb-32 lg:pt-48 lg:pb-40 overflow-hidden">
       {/* Background Video */}
@@ -12,16 +22,19 @@ const Hero = () => {
         muted
         loop
         playsInline
+        onError={handleVideoError}
+        onLoadedData={handleVideoLoad}
       >
         <source src="https://drive.google.com/uc?export=download&id=1FcsqGMTsNRW_09_Ff3D4D4aEhJhyTTMW" type="video/mp4" />
-        {/* Fallback to the original background image if video fails to load */}
-        <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20 transition-all duration-700 hover:opacity-25 hover:scale-105" 
-          style={{
-            backgroundImage: "url('/lovable-uploads/85cfaad9-50c2-48e0-83b7-afdbe2e1cde8.png')"
-          }} 
-        />
       </video>
+      
+      {/* Fallback background image - always present */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20 transition-all duration-700 hover:opacity-25 hover:scale-105" 
+        style={{
+          backgroundImage: "url('/lovable-uploads/85cfaad9-50c2-48e0-83b7-afdbe2e1cde8.png')"
+        }} 
+      />
       
       {/* Optional gradient overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white/40 rounded-lg" />
