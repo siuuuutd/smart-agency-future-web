@@ -55,7 +55,7 @@ const Hero = () => {
         <p className="mt-6 text-lg text-muted-foreground transition-all duration-300 hover:scale-102 hover:text-gray-700">
           We build custom AI solutions that streamline your operations, enhance customer engagement, and drive growth. Let AI handle the work, so you can focus on what matters most.
         </p>
-        <div className="mt-8 flex gap-4">
+        <div className="mt-8">
           <Link to="/contact">
             <Button
               size="lg"
@@ -64,13 +64,6 @@ const Hero = () => {
               Get Started
             </Button>
           </Link>
-          <Button
-            size="lg"
-            variant="outline"
-            className="transition-all duration-300 hover:scale-110 hover:shadow-lg hover:bg-orange-50 hover:border-orange-300"
-          >
-            Learn More
-          </Button>
         </div>
       </div>
     </section>
