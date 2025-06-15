@@ -19,7 +19,7 @@ const GetStartedSection = () => (
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-        <div className="text-left">
+        <div className="bg-gray-50 p-8 rounded-2xl text-left">
           <div className="text-orange-500 text-xl font-bold mb-4">1.</div>
           <h3 className="text-xl font-bold text-gray-900 mb-4">
             Tell Us Your Requirements
@@ -29,7 +29,7 @@ const GetStartedSection = () => (
           </p>
         </div>
         
-        <div className="text-left">
+        <div className="bg-gray-50 p-8 rounded-2xl text-left">
           <div className="text-orange-500 text-xl font-bold mb-4">2.</div>
           <h3 className="text-xl font-bold text-gray-900 mb-4">
             Implement
@@ -39,7 +39,7 @@ const GetStartedSection = () => (
           </p>
         </div>
         
-        <div className="text-left">
+        <div className="bg-gray-50 p-8 rounded-2xl text-left">
           <div className="text-orange-500 text-xl font-bold mb-4">3.</div>
           <h3 className="text-xl font-bold text-gray-900 mb-4">
             Watch Your Business Grow
