@@ -43,7 +43,8 @@ const FAQSection = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className="group relative bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-500 cursor-pointer hover:scale-[1.02] hover:-translate-y-1"
+              className="group relative bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-500 cursor-pointer hover:scale-[1.02] hover:-translate-y-1 hover:z-50"
+              style={{ zIndex: faqs.length - index }}
             >
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-medium text-gray-900 group-hover:text-orange-500 transition-colors duration-300">
@@ -57,7 +58,7 @@ const FAQSection = () => {
               </div>
               
               {/* Hover answer */}
-              <div className="absolute left-0 right-0 top-full mt-2 bg-white border border-gray-200 rounded-2xl p-6 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-10 transform translate-y-2 group-hover:translate-y-0">
+              <div className="absolute left-0 right-0 top-full mt-2 bg-white border border-gray-200 rounded-2xl p-6 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 transform translate-y-2 group-hover:translate-y-0" style={{ zIndex: 100 }}>
                 <p className="text-gray-600 leading-relaxed">
                   {faq.answer}
                 </p>
