@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Mail, Instagram } from "lucide-react";
 import Header from "@/components/Header";
@@ -8,7 +7,7 @@ const Contact = () => {
   return (
     <div className="bg-background min-h-screen w-full font-montserrat">
       <Header />
-      <main className="pt-32 pb-16">
+      <main className="pt-48 pb-16">
         <div className="container max-w-6xl mx-auto px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left Side - Contact Information */}
