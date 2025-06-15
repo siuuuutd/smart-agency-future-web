@@ -16,13 +16,9 @@ const Hero = () => {
     const dx = (e.clientX - cx) / rect.width;
     const dy = (e.clientY - cy) / rect.height;
     
-    // Move background based on mouse position
-    pos.current.x = dx * 20;
-    pos.current.y = dy * 20;
-    
-    if (bgRef.current) {
-      bgRef.current.style.backgroundPosition = `${pos.current.x}px ${pos.current.y}px`;
-    }
+    // Move background based on mouse position (additive to the base animation)
+    pos.current.x = dx * 10;
+    pos.current.y = dy * 10;
   }, []);
 
   return (
@@ -35,8 +31,9 @@ const Hero = () => {
         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cg fill='none' stroke='%23ff9a00' stroke-width='1' opacity='0.3'%3E%3Cpath d='M0 0h50v50H0z'/%3E%3C/g%3E%3C/svg%3E")`,
         backgroundRepeat: 'repeat',
         backgroundSize: '50px 50px',
-        backgroundPosition: '0px 0px',
-        transition: 'background-position 0.1s ease-out'
+        animation: 'gridMove 20s linear infinite',
+        transform: `translate(${pos.current.x}px, ${pos.current.y}px)`,
+        transition: 'transform 0.1s ease-out'
       }}
     >
       {/* Foreground content */}

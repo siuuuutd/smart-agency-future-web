@@ -39,6 +39,16 @@ body {
   }
 }
 
+/* Moving grid background animation */
+@keyframes gridMove {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
 /* Custom scroll animations */
 @keyframes smooth-entrance {
   from {
