@@ -11,6 +11,7 @@ const Hero = () => {
   const vantaEffect = useRef<any>(null);
 
   useEffect(() => {
+    // Initialize Vanta only if it's not already set and element exists
     if (!vantaEffect.current && vantaRef.current) {
       vantaEffect.current = DOTS({
         el: vantaRef.current,
@@ -22,7 +23,7 @@ const Hero = () => {
         minWidth: 200.0,
         scale: 1.0,
         scaleMobile: 1.0,
-        color: 0xff9a00,         // Use 0xff9a00 (no "#")
+        color: 0xff9a00,
         color2: 0xff9a00,
         backgroundColor: 0xfafafa,
         size: 7.1,
@@ -30,9 +31,20 @@ const Hero = () => {
         showLines: false,
       });
     }
+
+    // Cleanup (destroy) - guard against DOM issues
     return () => {
       if (vantaEffect.current) {
-        vantaEffect.current.destroy();
+        try {
+          // Only destroy if node is still present in DOM
+          const el = vantaEffect.current?.el;
+          if (el && el.parentNode) {
+            vantaEffect.current.destroy();
+          }
+        } catch (e) {
+          // Swallow error: Vanta can throw if node is missing
+          // console.warn("Vanta destroy error:", e);
+        }
         vantaEffect.current = null;
       }
     };
@@ -42,7 +54,7 @@ const Hero = () => {
     <section
       ref={vantaRef}
       className="relative container flex flex-col items-center pt-32 pb-24 md:pt-40 md:pb-32 lg:pt-48 lg:pb-40 overflow-hidden"
-      style={{ background: "#fafafa" }}
+      style={{ background: "#fafafa" /* fallback in case Vanta fails */ }}
     >
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center max-w-3xl">
@@ -76,3 +88,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
