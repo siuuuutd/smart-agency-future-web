@@ -6,7 +6,7 @@ const QuickRepliesSection = () => (
   <section className="py-16 md:py-24 bg-white">
     <div className="container max-w-6xl mx-auto px-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div className="flex justify-center order-1">
+        <div className="flex justify-center">
           <div className="relative max-w-sm">
             <img 
               src="/lovable-uploads/9b78615e-3c90-4afd-aeb4-dc7c6290cb1d.png" 
@@ -20,7 +20,7 @@ const QuickRepliesSection = () => (
           </div>
         </div>
         
-        <div className="space-y-6 order-2 text-left">
+        <div className="space-y-6 text-left lg:pl-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
             AI-Powered Quick Replies
           </h2>
