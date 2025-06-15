@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -19,13 +20,10 @@ const Footer = () => (
         <div>
           <h3 className="text-white font-semibold text-lg mb-4">Menu</h3>
           <div className="space-y-3">
-            <Link to="/" className="block text-gray-300 hover:text-white transition-colors">
-              Home
-            </Link>
-            <a href="#about" className="block text-gray-300 hover:text-white transition-colors">
+            <a href="/#about" className="block text-gray-300 hover:text-white transition-colors">
               About
             </a>
-            <a href="#features" className="block text-gray-300 hover:text-white transition-colors">
+            <a href="/#features" className="block text-gray-300 hover:text-white transition-colors">
               Features
             </a>
             <Link to="/contact" className="block text-gray-300 hover:text-white transition-colors">
