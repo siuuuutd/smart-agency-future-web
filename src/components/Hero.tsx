@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <section
       ref={bgRef}
-      className="relative w-full min-h-[60vh] flex items-center justify-center overflow-hidden"
+      className="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden pt-24"
       onMouseMove={onMouseMove}
       style={{
         backgroundColor: '#fafafa',
