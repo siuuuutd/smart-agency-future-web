@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => (
   <footer className="bg-black border-t mt-16">
@@ -19,15 +20,15 @@ const Footer = () => (
         <div>
           <h3 className="text-white font-semibold text-lg mb-4">Menu</h3>
           <div className="space-y-3">
-            <a href="#" className="block text-gray-300 hover:text-white transition-colors">
+            <Link to="/" className="block text-gray-300 hover:text-white transition-colors">
               Home
-            </a>
-            <a href="#" className="block text-gray-300 hover:text-white transition-colors">
+            </Link>
+            <a href="#features" className="block text-gray-300 hover:text-white transition-colors">
               Features
             </a>
-            <a href="#" className="block text-gray-300 hover:text-white transition-colors">
+            <Link to="/contact" className="block text-gray-300 hover:text-white transition-colors">
               Contact
-            </a>
+            </Link>
           </div>
         </div>
         

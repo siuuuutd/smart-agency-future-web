@@ -1,10 +1,11 @@
 
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "Features", href: "#features" },
   { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const Header = () => {
@@ -32,24 +33,34 @@ const Header = () => {
         <div className={`relative flex items-center transition-all duration-500 ease-out ${
           isScrolled ? 'space-x-8' : 'justify-between'
         }`}>
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img 
               src="/lovable-uploads/2b49c033-8f68-45a0-80de-d43df6d6d945.png" 
               alt="Adya Agency Logo" 
               className={`transition-all duration-500 ease-out ${isScrolled ? 'h-8' : 'h-10'}`} 
             />
-          </a>
+          </Link>
           <nav className={`flex items-center gap-6 transition-all duration-500 ease-out ${
             isScrolled ? 'text-sm' : 'text-base'
           }`}>
             {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="transition-all duration-300 ease-out hover:text-orange-500 text-gray-700 font-medium hover:scale-105"
-              >
-                {link.label}
-              </a>
+              link.href.startsWith('#') ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="transition-all duration-300 ease-out hover:text-orange-500 text-gray-700 font-medium hover:scale-105"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="transition-all duration-300 ease-out hover:text-orange-500 text-gray-700 font-medium hover:scale-105"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
         </div>
