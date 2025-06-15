@@ -1,11 +1,17 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
+
 const Hero = () => {
-  return <section className="relative container flex flex-col items-center py-24 md:py-32 overflow-hidden">
+  return (
+    <section className="relative container flex flex-col items-center pt-32 pb-24 md:pt-40 md:pb-32 lg:pt-48 lg:pb-40 overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20" style={{
-      backgroundImage: "url('/lovable-uploads/c95dc63f-b6db-43c5-89ee-2ae2d7651b6b.png')"
-    }} />
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20" 
+        style={{
+          backgroundImage: "url('/lovable-uploads/c95dc63f-b6db-43c5-89ee-2ae2d7651b6b.png')"
+        }} 
+      />
       
       {/* Optional gradient overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/30 rounded-lg" />
@@ -24,6 +30,8 @@ const Hero = () => {
           <Button size="lg" variant="outline">Learn More</Button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
