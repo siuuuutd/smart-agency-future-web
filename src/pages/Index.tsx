@@ -21,7 +21,7 @@ const Index = () => {
         <ProductsSection />
         
         {/* Features Designed for Growth Title Section */}
-        <section className="py-16 md:py-20 bg-white w-full">
+        <section id="features" className="py-16 md:py-20 bg-white w-full">
           <div className="container max-w-6xl mx-auto px-8 text-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 transition-all duration-500 hover:scale-105 hover:text-orange-600">
               Features Designed for Growth
