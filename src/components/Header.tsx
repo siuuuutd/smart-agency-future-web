@@ -29,17 +29,12 @@ const Header = () => {
           ? 'bg-white rounded-full px-6 py-2' 
           : 'bg-white rounded-2xl px-8 py-4'
       }`}>
-        {/* Moving glow animation */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-500/20 to-transparent animate-[glow-sweep_3s_ease-in-out_infinite]"></div>
-        </div>
-        
         <div className={`relative flex items-center transition-all duration-700 ease-out ${
           isScrolled ? 'space-x-8' : 'justify-between'
         }`}>
           <a href="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/073c0380-e646-4460-bdb6-9beed3e0c3e3.png" 
+              src="/lovable-uploads/bf70c0cb-9573-450b-9136-b9ef32a2457c.png" 
               alt="Adya Agency Logo" 
               className={`transition-all duration-700 ease-out ${isScrolled ? 'h-8' : 'h-10'}`} 
             />

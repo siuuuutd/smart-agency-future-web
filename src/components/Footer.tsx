@@ -1,12 +1,18 @@
+
 import React from "react";
 import { Instagram } from "lucide-react";
-const Footer = () => <footer className="bg-black border-t mt-16">
+
+const Footer = () => (
+  <footer className="bg-black border-t mt-16">
     <div className="container max-w-6xl mx-auto px-8 py-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo Section */}
-        <div className="flex items-center space-x-2">
-          <img src="/lovable-uploads/06410a89-0898-45f8-8ce8-ece7aa12652d.png" alt="Adya Agency Logo" className="h-6 w-6" />
-          <span className="font-semibold text-orange-500 text-lg">Adya Agency</span>
+        <div className="flex items-center">
+          <img 
+            src="/lovable-uploads/bf70c0cb-9573-450b-9136-b9ef32a2457c.png" 
+            alt="Adya Agency Logo" 
+            className="h-8" 
+          />
         </div>
         
         {/* Menu Section */}
@@ -46,5 +52,7 @@ const Footer = () => <footer className="bg-black border-t mt-16">
         </p>
       </div>
     </div>
-  </footer>;
+  </footer>
+);
+
 export default Footer;
