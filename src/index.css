@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +9,19 @@
 /* Add custom class for hero heading font */
 .font-hero {
   @apply font-playfair;
+}
+
+/* Custom glow animation for navigation */
+@keyframes glow-sweep {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  50% {
+    transform: translateX(100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(300%) skewX(-15deg);
+  }
 }
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
