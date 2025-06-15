@@ -3,31 +3,30 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
-  const handleVideoError = (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
-    console.log('Video failed to load:', e);
-    const video = e.currentTarget;
-    video.style.display = 'none';
-  };
-
-  const handleVideoLoad = () => {
-    console.log('Video loaded successfully');
-  };
-
   return (
     <section className="relative container flex flex-col items-center pt-32 pb-24 md:pt-40 md:pb-32 lg:pt-48 lg:pb-40 overflow-hidden">
-      {/* Background Video */}
-      <video 
-        className="absolute inset-0 w-full h-full object-cover opacity-30 transition-all duration-700 hover:opacity-35" 
-        autoPlay
-        muted
-        loop
-        playsInline
-        onError={handleVideoError}
-        onLoadedData={handleVideoLoad}
-      >
-        <source src="https://drive.google.com/uc?export=download&id=1FcsqGMTsNRW_09_Ff3D4D4aEhJhyTTMW" type="video/mp4" />
-      </video>
-      
+      {/* YouTube Background Video */}
+      <div className="pointer-events-none absolute inset-0 w-full h-full -z-10">
+        <iframe
+          title="Hero Background Video"
+          width="100%"
+          height="100%"
+          className="w-full h-full object-cover opacity-30 transition-all duration-700 hover:opacity-35"
+          src="https://www.youtube.com/embed/8VYCJTf0_W0?autoplay=1&mute=1&controls=0&loop=1&playlist=8VYCJTf0_W0&modestbranding=1&showinfo=0&rel=0"
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            pointerEvents: "none",
+          }}
+        />
+      </div>
+
       {/* Fallback background image - always present */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-20 transition-all duration-700 hover:opacity-25 hover:scale-105" 
