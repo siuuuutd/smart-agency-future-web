@@ -34,7 +34,7 @@ const Header = () => {
         }`}>
           <a href="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/bf70c0cb-9573-450b-9136-b9ef32a2457c.png" 
+              src="/lovable-uploads/2b49c033-8f68-45a0-80de-d43df6d6d945.png" 
               alt="Adya Agency Logo" 
               className={`transition-all duration-700 ease-out ${isScrolled ? 'h-8' : 'h-10'}`} 
             />
